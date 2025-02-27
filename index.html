@@ -24,6 +24,7 @@
 	
   .frame {
     position: relative;
+    z-index: -10;
     width: 500px;
     height: 500px;
     border: 1px solid black;
@@ -43,6 +44,7 @@
     background-size: auto, 1em 1.8em;
     background-repeat: no-repeat, repeat;
     background-position: top left, left top;
+    border: 0.1px solid black;
   }
   
   .cup::before {
@@ -75,6 +77,12 @@
     left: calc(50% - 3em);
   }
   
+  .bottom-cup {
+    position: absolute;
+    top: 24em;
+    left: calc(50% - 3em);
+  }
+  
   .handle::after {
     content: "";
     width: 2em;
@@ -85,20 +93,30 @@
     transform: translate(-2em)
   }
   
-  .bottom-cup {
+  .bottom-cup::after {
+    content: "";
+    width: 8em;
+    height: 3em;
     position: absolute;
-    top: 24em;
-    left: calc(50% - 3em);
+    top: 4em;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: skewX(5deg);
+    filter: blur(5px);
   }
+
 
 </style>
 
 
 <div class="frame">
-  <div class="top-cup handle">
+  <div class="top-cup">
     <div class="cup"></div>
+    <div class="handle"></div>
   </div>
-  <div class="bottom-cup handle">
+  <div class="bottom-cup">
     <div class="cup"></div>
+    <div class="handle"></div>
   </div>
 </div>

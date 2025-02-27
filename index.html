@@ -38,12 +38,11 @@
     position: absolute;
     clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 73%, 80% 100%, 20% 100%, 0 73%, 0% 20%);
     background-image: 
-      radial-gradient(ellipse at top left, rgba(255,255,255, 0.2), 90%, rgba(0,0,0, 1) 100%),
+      radial-gradient(ellipse at top, rgba(255,255,255, 0.2) 50%, rgba(0,0,0, 0.5) 100%),
       linear-gradient(white 50%, blue 50%);
     background-size: auto, 1em 1.8em;
     background-repeat: no-repeat, repeat;
     background-position: top left, left top;
-    border: 0.5px solid black;
   }
   
   .cup::before {
@@ -51,7 +50,7 @@
     width: 60%;
     height: 75%;
     background: linear-gradient(to left, 
-              rgba(255, 80, 80, 1) 10%, 
+              rgba(255, 80, 80, 1) 5%, 
               rgba(200, 0, 0, 1) 85%, 
               rgba(120, 0, 0, 1) 100%);
     position: absolute;
@@ -64,6 +63,7 @@
     width: 30%;
     height: 30%;
     background-color: white;
+    border: 1px solid black;
     position: absolute;
     top: 23%;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
